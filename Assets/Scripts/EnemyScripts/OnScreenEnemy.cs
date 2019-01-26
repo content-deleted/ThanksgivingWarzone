@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class OnScreenEnemy : MonoBehaviour
 {
-    void Update()
+    static List<OnScreenEnemy> inactiveEnemies = new List<OnScreenEnemy>();
+    void Awake()
     {
-        
+        inactiveEnemies.Add(this);
+        gameObject.SetActive(false);
+    }
+    
+    /// <summary>
+    /// Call this when the enemy goes on screen
+    /// </summary>
+    public void Awaken () {
+
     }
 }
