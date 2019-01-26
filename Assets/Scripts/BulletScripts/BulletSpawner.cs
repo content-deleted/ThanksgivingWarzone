@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using System;
 public class BulletSpawner : MonoBehaviour {
 	const float tau = 2*Mathf.PI;
 	private GameObject bulletTemplate;
@@ -17,6 +18,8 @@ public class BulletSpawner : MonoBehaviour {
 	public Quaternion rotation = Quaternion.AngleAxis(0, Vector3.forward);
 	public Vector3 scale = new Vector3(0.05F,0.05F,0.05F);
 
+    public Bullet.MoveFunctions moveFunc;
+
 	void Awake () => bulletTemplate = Resources.Load("bullet") as GameObject;
 	void Update () {
 		counter += wave;
@@ -25,8 +28,6 @@ public class BulletSpawner : MonoBehaviour {
 	}
 	void Start() => StartCoroutine(SpawnLoop());
 
-    // GameObject.Instantiate(Resources.Load(type)) as GameObject;
-
 	IEnumerator SpawnLoop() { while(true) {
 		for (int i = 0; i < bulletAmount; i++) {
 			float angle = ArcOffset + (bulletArc/bulletAmount)*i - bulletArc/4 + currentOffset;
@@ -34,7 +35,7 @@ public class BulletSpawner : MonoBehaviour {
             
 			var sp = BulletPool.rent();
 			sp.transform.localPosition = new Vector3 (transform.localPosition.x, transform.localPosition.y, 0);
-			sp.GetComponent<Bullet>().Init(direction, 0,bulletSpeed,null,bulletSprite, bulletTint, true);
+			sp.GetComponent<Bullet>().Init(direction, 0,bulletSpeed, moveFunc,bulletSprite, bulletTint, true);
 		    
         	sp.transform.localScale = scale;
 		}

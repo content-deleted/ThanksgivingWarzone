@@ -9,11 +9,11 @@ public class Bullet : MonoBehaviour {
 	float Rotation;
 	Action MoveFunc; 
 	public bool hostile; //0=hurts enemys 1=hurts player
-	public void Init(Vector2 dir, float rot, float spd, Action act, Sprite spr, Color color, bool enemy) {
+	public void Init(Vector2 dir, float rot, float spd, MoveFunctions act, Sprite spr, Color color, bool enemy) {
 		SpriteRenderer sp = GetComponent<SpriteRenderer>();
 		MoveVector = dir.normalized * spd; 
 		Rotation = rot; 
-		MoveFunc = act; sp.sprite = spr;
+		MoveFunc = getMoveFunction(act); sp.sprite = spr;
 		sp.color = color; hostile = enemy;
 	}
 	void Update () {
@@ -24,7 +24,24 @@ public class Bullet : MonoBehaviour {
         MoveFunc?.Invoke();
     }
 
+    public enum MoveFunctions: int {
+        None,
+        LeftSine,
+        RightSine,
+        Spin
+    }
+
+    public Action getMoveFunction (MoveFunctions f){
+        switch (f) {
+            case MoveFunctions.LeftSine: return LeftSine;
+            case MoveFunctions.RightSine: return RightSine;
+            case MoveFunctions.Spin: return Spin;
+            default: return null;
+        }
+    }
+
     //Move functions 
-    public float LeftSine () => -1 * RightSine();
-    public float RightSine () => Mathf.Sin(transform.localPosition.y * 25F) * 0.85F;
+    public void LeftSine () => MoveVector = MoveVector * -Mathf.Sin(transform.localPosition.y * 25F) * 0.85F;
+    public void RightSine () => MoveVector = MoveVector * Mathf.Sin(transform.localPosition.y * 25F) * 0.85F;
+    public void Spin () => transform.Rotate(new Vector3(0,0,5f)); 
 }

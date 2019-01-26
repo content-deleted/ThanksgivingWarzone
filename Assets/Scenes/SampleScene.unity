@@ -562,10 +562,11 @@ MonoBehaviour:
   bulletfrequency: 0.27
   spin: 0.12
   wave: 0.12
-  bulletSprite: {fileID: 21300000, guid: a84ab76fc340447409d2a500a92da5a7, type: 3}
+  bulletSprite: {fileID: 21300000, guid: 0a88270e831c232499ff5781281f7740, type: 3}
   bulletTint: {r: 1, g: 1, b: 1, a: 1}
   rotation: {x: 0, y: 0, z: 0, w: 1}
-  scale: {x: 1, y: 1, z: 1}
+  scale: {x: 0.1, y: 0.1, z: 1}
+  moveFunc: 3
 --- !u!212 &741315996
 SpriteRenderer:
   m_ObjectHideFlags: 0
