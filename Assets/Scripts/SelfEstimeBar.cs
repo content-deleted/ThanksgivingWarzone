@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class SelfEsteemBar : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Stack<GameObject> parts=new Stack<GameObject>();
+    public float fadeOutSpeed;
     void Start()
     {
-        //Player.instance.selfEsteem;
+        Player.instance.selfEsteem= parts.Count;
     }
 
     // Update is called once per frame
@@ -15,6 +16,15 @@ public class SelfEsteemBar : MonoBehaviour
     {}
     public void decrementSelfEsteemBar()
     {
-        //transform.localScale=new Vector3()
+        StartCoroutine("Fade", parts.Pop().GetComponent<Color>());
+    }
+
+    public IEnumerator Fade(Color r)
+    {
+        for (int f = 255; f > 0; f--)
+        {
+            r.a = f;
+            yield return new WaitForSeconds(fadeOutSpeed);
+        }
     }
 }

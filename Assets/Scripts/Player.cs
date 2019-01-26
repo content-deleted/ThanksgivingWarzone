@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     public static Player instance;
     float moveSpeed = 0.25f;
 
-    public int selfEsteem = 5;
+    public int selfEsteem;
 
     //singleton
     private void Awake()
