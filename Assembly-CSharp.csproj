@@ -56,7 +56,9 @@
      <Compile Include="Assets\Scripts\BulletScripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\BulletScripts\BulletPool.cs" />
      <Compile Include="Assets\Scripts\BulletScripts\BulletSpawner.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\OnScreenEnemy.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Utils.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/dev/ThanksgivingWarzone/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>

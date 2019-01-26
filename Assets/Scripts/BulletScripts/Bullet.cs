@@ -17,17 +17,13 @@ public class Bullet : MonoBehaviour {
 		sp.color = color; hostile = enemy;
 	}
 	void Update () {
-		if (!IsOnScreen()) BulletPool.recall(this.gameObject);//RETURN TO LIST OF BULLETS
+		if (!Utils.IsOnScreen(gameObject)) BulletPool.recall(this.gameObject);//RETURN TO LIST OF BULLETS
 		
 		Vector2 m = MoveVector * Time.deltaTime;
 		transform.localPosition = transform.localPosition+new Vector3(m.x,m.y,0);
         MoveFunc?.Invoke();
     }
 
-	protected bool IsOnScreen() => 
-		Math.Abs(transform.localPosition.x) < 10 &&
-		Math.Abs(transform.localPosition.y) < 5;
-    
     //Move functions 
     public float LeftSine () => -1 * RightSine();
     public float RightSine () => Mathf.Sin(transform.localPosition.y * 25F) * 0.85F;
