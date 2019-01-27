@@ -32,7 +32,11 @@ public class PlayerMovement : MonoBehaviour
             anim.SetTrigger("Idle");
             anime = 0;
         }
-        Vector3 axis = new Vector3(x, y,0);
-        transform.localPosition += axis * moveSpeed;
+        Vector3 move = moveSpeed * new Vector3(x, y,0);
+        if( Mathf.Abs(transform.localPosition.x + move.x) > 5 )
+        move.x = 0;
+        if(Mathf.Abs(transform.localPosition.y + move.y) > 5 )
+        move.y = 0;
+        transform.localPosition += move;
     }
 }

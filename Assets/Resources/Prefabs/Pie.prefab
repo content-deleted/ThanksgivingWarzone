@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 3141497515510130437}
   - component: {fileID: 3141497515510130436}
   - component: {fileID: 2709439696154531322}
+  - component: {fileID: 4908671151172601984}
+  - component: {fileID: 2569797131351810465}
   m_Layer: 0
   m_Name: Pie
   m_TagString: Good
@@ -259,3 +261,27 @@ PolygonCollider2D:
       - {x: 0.79999995, y: -1.87}
       - {x: 1.1, y: -1.8499999}
       - {x: 1.43, y: -1.8399999}
+--- !u!114 &4908671151172601984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3141497515510130438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a0c8250fb6ad5540a8fff89917bdeb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2569797131351810465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3141497515510130438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d198f8d701a4b9f4a9cf09fbe744f516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 6468500279155412994}
   - component: {fileID: 1205810984241758237}
   - component: {fileID: 9179447396594081732}
+  - component: {fileID: 5662734404912091808}
+  - component: {fileID: 2898538244239789651}
   m_Layer: 0
   m_Name: Ham
   m_TagString: Good
@@ -263,3 +265,27 @@ PolygonCollider2D:
       - {x: 1.39, y: -1.61}
       - {x: 1.66, y: -1.5699999}
       - {x: 1.9, y: -1.48}
+--- !u!114 &5662734404912091808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3509855954996965643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a0c8250fb6ad5540a8fff89917bdeb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2898538244239789651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3509855954996965643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d198f8d701a4b9f4a9cf09fbe744f516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

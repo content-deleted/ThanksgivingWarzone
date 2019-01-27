@@ -59,8 +59,14 @@
      <Compile Include="Assets\Scripts\BulletScripts\LetterPool.cs" />
      <Compile Include="Assets\Scripts\BulletScripts\LetterSpawn.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\AuntJenny.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\CousinMovement.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\Dad.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\EnemyHealth.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\Mom.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\OnScreenEnemy.cs" />
+     <Compile Include="Assets\Scripts\FoodMove.cs" />
      <Compile Include="Assets\Scripts\LoadOnTitle.cs" />
      <Compile Include="Assets\Scripts\MoveWithCam.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />

@@ -21,6 +21,9 @@ public class LetterSpawn : MonoBehaviour {
 	public Vector3 scale = new Vector3(0.05F,0.05F,0.05F);
     public Bullet.MoveFunctions moveFunc;
 
+    public int timeBetweenLetters = 0;
+    public bool ENABLED = true;
+
     private System.Random rand = new System.Random();
 
 	void Awake () => bulletTemplate = Resources.Load("bullet") as GameObject;
@@ -45,10 +48,13 @@ public class LetterSpawn : MonoBehaviour {
 
     List<char> getNewTopic () => Topics[rand.Next(Topics.Count()-1)].ToList();
 
-	IEnumerator SpawnLoop() { while(true) {
+	IEnumerator SpawnLoop() { while(ENABLED) {
 		for (int i = 0; i < bulletAmount; i++) {
-            if(ourStrings[i].Count < 1) 
+            if(ourStrings[i].Count < 1) {
                 ourStrings[i] = getNewTopic();
+                for(int j = 0; j < timeBetweenLetters; j++) 
+                    ourStrings[i].Add(' ');
+            }
             char c = ourStrings[i].First();
             ourStrings[i].RemoveAt(0);
             if(c == ' ') continue;

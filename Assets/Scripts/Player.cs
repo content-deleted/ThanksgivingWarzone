@@ -5,8 +5,6 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public static Player instance;
-    float moveSpeed = 0.25f;
-
     public int selfEsteem;
 
     //singleton
@@ -52,16 +50,22 @@ public class Player : MonoBehaviour
     public float bulletSpeed = 1;
     public Sprite bulletSprite;
     public float scale = 0.25f;
+    public float shootFrameReset;
+
+    private float timer = 0;
 
     public void Update () {
-        if(Input.GetButton("Fire1")) {
-			Vector2 direction = Vector2.up;
-            
-			var sp = BulletPool.rent();
-			sp.transform.position = new Vector3 (transform.position.x, transform.position.y, 0);
-			sp.GetComponent<Bullet>().Init(direction, 0, bulletSpeed, 0, bulletSprite, Color.white, false);
-		    
-        	sp.transform.localScale = Vector3.one * scale;
+        if (Input.GetButton("Fire1") && timer < 0)
+        {
+            Vector2 direction = Vector2.up;
+
+            var sp = BulletPool.rent();
+            sp.transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+            sp.GetComponent<Bullet>().Init(direction, 0, bulletSpeed, 0, bulletSprite, Color.white, false);
+
+            sp.transform.localScale = Vector3.one * scale;
+            timer = shootFrameReset;
         }
+        timer--;
     }
 }
