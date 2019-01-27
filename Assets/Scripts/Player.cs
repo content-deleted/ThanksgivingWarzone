@@ -18,15 +18,15 @@ public class Player : MonoBehaviour
             Destroy(gameObject);
     }
 
-
-
-    void Update()
-    {
-        float X=Input.GetAxis("Horizontal");
-        float Y = Input.GetAxis("Vertical");
-        //if(X>0) StraiffRight();
-        //if(X<0) StraiffLeft();
-        Vector3 axis = new Vector3(X, Y,0);
-        transform.localPosition += axis * moveSpeed;
+    void OnTriggerEnter2D (Collider2D other) {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            selfEsteem--;
+            // Hurt the player
+            if(selfEsteem>=0)
+            SelfEsteemBar.singleton.decrementSelfEsteemBar(selfEsteem);
+            //if(selfEsteem==0)
+            //lose condition
+        }
     }
 }

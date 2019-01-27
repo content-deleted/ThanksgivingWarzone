@@ -4,28 +4,19 @@ using UnityEngine;
 
 public class SelfEsteemBar : MonoBehaviour
 {
+    public static SelfEsteemBar singleton;
     public GameObject[] parts=new GameObject[3];
-    private int current=0;
     public float fadeOutSpeed;
-    void Start()
-    {
-        Player.instance.selfEsteem= parts.Length;
-    }
+    void Awake () => singleton = this;
+    void Start() => Player.instance.selfEsteem = parts.Length;
+    public void decrementSelfEsteemBar(int current)
+    => StartCoroutine("Fade", parts[current].GetComponent<SpriteRenderer>());
 
-    // Update is called once per frame
-    void Update()
-    {}
-    public void decrementSelfEsteemBar()
+    public IEnumerator Fade(SpriteRenderer r)
     {
-        StartCoroutine("Fade", parts[current].GetComponent<Color>());
-        current++;
-    }
-
-    public IEnumerator Fade(Color r)
-    {
-        for (int f = 255; f > 0; f--)
+        for (float f = 1; f > 0; f-=0.1f)
         {
-            r.a = f;
+            r.color = new Vector4(1,1,1,f);
             yield return new WaitForSeconds(fadeOutSpeed);
         }
     }
