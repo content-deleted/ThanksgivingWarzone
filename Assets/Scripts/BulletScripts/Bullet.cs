@@ -9,6 +9,8 @@ public class Bullet : MonoBehaviour {
 	float Rotation;
 	Action MoveFunc; 
 	public bool hostile; //0=hurts enemys 1=hurts player
+
+    public bool letter = false;
 	public void Init(Vector2 dir, float rot, float spd, MoveFunctions act, Sprite spr, Color color, bool enemy) {
 		SpriteRenderer sp = GetComponent<SpriteRenderer>();
 		MoveVector = dir.normalized * spd; 
@@ -16,8 +18,19 @@ public class Bullet : MonoBehaviour {
 		MoveFunc = getMoveFunction(act); sp.sprite = spr;
 		sp.color = color; hostile = enemy;
 	}
+
+    public void InitText(Vector2 dir, float rot, float spd, MoveFunctions act, bool enemy) {
+		MoveVector = dir.normalized * spd; 
+		Rotation = rot; 
+		MoveFunc = getMoveFunction(act); 
+        hostile = enemy;
+        letter = true;
+	}
 	void Update () {
-		if (!Utils.IsOnScreen(gameObject)) BulletPool.recall(this.gameObject);//RETURN TO LIST OF BULLETS
+		if (!Utils.IsOnScreen(gameObject)) {
+            if(letter) LetterPool.recall(this.gameObject);//RETURN TO LIST OF BULLETS
+            else BulletPool.recall(this.gameObject);
+        }
 		
 		Vector2 m = MoveVector * Time.deltaTime;
 		transform.localPosition = transform.localPosition+new Vector3(m.x,m.y,0);
