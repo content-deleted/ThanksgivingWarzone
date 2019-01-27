@@ -27,14 +27,16 @@ public class Bullet : MonoBehaviour {
         letter = true;
 	}
 	void Update () {
-		if (!Utils.IsOnScreen(gameObject)) {
-            if(letter) LetterPool.recall(this.gameObject);//RETURN TO LIST OF BULLETS
-            else BulletPool.recall(this.gameObject);
-        }
+		if (!Utils.IsOnScreen(gameObject)) BulletDestroy ();
 		
 		Vector2 m = MoveVector * Time.deltaTime;
 		transform.localPosition = transform.localPosition+new Vector3(m.x,m.y,0);
         MoveFunc?.Invoke();
+    }
+
+    public void BulletDestroy () {
+        if(letter) LetterPool.recall(this.gameObject);//RETURN TO LIST OF BULLETS
+        else BulletPool.recall(this.gameObject);
     }
 
     public enum MoveFunctions: int {

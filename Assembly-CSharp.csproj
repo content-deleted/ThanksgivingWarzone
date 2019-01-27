@@ -68,10 +68,12 @@
      <Compile Include="Assets\Scripts\EnemyScripts\OnScreenEnemy.cs" />
      <Compile Include="Assets\Scripts\FoodMove.cs" />
      <Compile Include="Assets\Scripts\LoadOnTitle.cs" />
+     <Compile Include="Assets\Scripts\MenuManager.cs" />
      <Compile Include="Assets\Scripts\MoveWithCam.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\SelfEsteemBar.cs" />
+     <Compile Include="Assets\Scripts\SpinningTurkeyLeg.cs" />
      <Compile Include="Assets\Scripts\T.cs" />
      <Compile Include="Assets\Scripts\Utils.cs" />
      <None Include="Assets\Background.shader" />

@@ -161,6 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5c4b8efe64c0441a2d5229e32f063a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 2
 --- !u!1 &5251701582445001869
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,7 +223,7 @@ MonoBehaviour:
   Chad: {fileID: 5251701581759737161}
   Brad: {fileID: 5251701582837784211}
   Frequency: 20
-  Speed: 100
+  Speed: 0.1
 --- !u!1 &5251701582837784211
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,3 +385,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5c4b8efe64c0441a2d5229e32f063a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 2

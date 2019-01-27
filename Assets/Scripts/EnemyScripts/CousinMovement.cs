@@ -41,7 +41,7 @@ public class CousinMovement : MonoBehaviour
 
     private void MoveEnemies()
     {
-        Chad.transform.position += new Vector3(Mathf.Sin(Time.time) / Frequency, -Time.time / Speed, 0);
-        Brad.transform.position += new Vector3(-Mathf.Sin(Time.time) / Frequency, -Time.time / Speed, 0);
+        if (Chad != null) Chad.transform.position += new Vector3(Mathf.Sin(Time.time) / Frequency, -Speed, 0);
+        if (Brad != null) Brad.transform.position += new Vector3(-Mathf.Sin(Time.time) / Frequency, -Speed, 0);
     }
 }

@@ -164,10 +164,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a27de7f53474044f87b8c3705a7090a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Frequency: 20
-  SideSpeed: 2
-  Speed: 20
-  SecondsTillFall: 1
+  Frequency: 60
+  SideSpeed: 0.1
+  Speed: 70
+  SecondsTillFall: 10
 --- !u!114 &719728219661176767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5c4b8efe64c0441a2d5229e32f063a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 3
 --- !u!114 &719728219661176709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,19 +205,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88bfc3a2b0c94f4d8bc03cea214664a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 10
+  bulletSpeed: 5
   bulletAmount: 1
-  bulletArc: 6.2831855
+  bulletArc: 6.281
   ArcOffset: 0
-  bulletfrequency: 0
+  bulletfrequency: 0.1
   spin: 0
   wave: 0
   bulletSprite: {fileID: 0}
   bulletTint: {r: 0, g: 0, b: 0, a: 0}
-  rotation: {x: 0, y: 0, z: 0, w: 1}
+  rotation: {x: 0, y: 0, z: 1, w: 1}
   scale: {x: 0.5, y: 0.5, z: 0.5}
   moveFunc: 0
   timeBetweenLetters: 10
   ENABLED: 1
   Topics:
-  - Tes
+  - 'Love life '
+  - 'Gender '
+  - 'Religion '
+  - 'Jobs '
+  - 'Immigration '
+  - 'Politics '
+  - 'Fortnite '

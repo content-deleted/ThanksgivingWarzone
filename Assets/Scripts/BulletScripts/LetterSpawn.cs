@@ -39,14 +39,14 @@ public class LetterSpawn : MonoBehaviour {
         StartCoroutine(SpawnLoop());
     }
 
-    void updateBulletAmount () {
+    public void updateBulletAmount () {
         ourStrings = new List<List<char>>();
         for (int i = 0; i < bulletAmount; i++){ 
             ourStrings.Add(getNewTopic());
         }
     }
 
-    List<char> getNewTopic () => Topics[rand.Next(Topics.Count()-1)].ToList();
+    List<char> getNewTopic () => Topics[rand.Next(Topics.Count())].ToList();
 
 	IEnumerator SpawnLoop() { while(ENABLED) {
 		for (int i = 0; i < bulletAmount; i++) {
@@ -66,6 +66,8 @@ public class LetterSpawn : MonoBehaviour {
 			sp.GetComponent<Bullet>().InitText(direction, 0,bulletSpeed, moveFunc, true);
 		    
         	sp.transform.localScale = scale;
+
+            sp.transform.rotation = rotation;
 
             // now set letter
             sp.GetComponent<TextMesh>().text = c.ToString();

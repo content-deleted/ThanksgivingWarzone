@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -28,11 +29,12 @@ public class Player : MonoBehaviour
         {
             selfEsteem--;
             // Hurt the player
-            if(selfEsteem>=0)
-            SelfEsteemBar.singleton.decrementSelfEsteemBar(selfEsteem);
+            if (selfEsteem > 0) SelfEsteemBar.singleton.decrementSelfEsteemBar(selfEsteem);
+            else SceneManager.LoadScene("GameOver");
             //if(selfEsteem<=0)
                 //gameOverScreen.SetActive(true);
-            //lose condition
+
+            if(other.gameObject.CompareTag("Bullet")) other.GetComponent<Bullet>().BulletDestroy ();
         }
         else if (other.tag.Equals("Good"))
         {
@@ -40,11 +42,13 @@ public class Player : MonoBehaviour
             other.attachedRigidbody.isKinematic = false;
             other.transform.position = new Vector3(-28+Random.value*2.2f,0, 0);
             //Heal
-            /* if (SelfEsteem < 4)
+            if (selfEsteem < 4)
             {
-                spiral.incrementSelfEsteemBar();
-                SelfEsteem++;
-            }*/
+                selfEsteem++;
+                SelfEsteemBar.singleton.incrementSelfEsteemBar(selfEsteem-1);
+                print(selfEsteem);
+                //selfEsteem++;
+            }
         }
     }
     public float bulletSpeed = 1;

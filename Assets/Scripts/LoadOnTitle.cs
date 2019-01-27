@@ -7,7 +7,7 @@ public class LoadOnTitle : MonoBehaviour
     public TextMesh textMesh;
     public string nextSceneName;
 	void Update () {
-        if (Input.GetButton("Fire1")) {
+        if (Input.anyKeyDown) {
             UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(nextSceneName);
             textMesh.text = "LOADING...";
         }

@@ -23,12 +23,12 @@ public class EnemyHealth : MonoBehaviour
             || other.gameObject.CompareTag("Enemy"))
         {
             health--;
-            // Hurt the player
+            // Die
             if (health <= 0)
                 Destroy(gameObject);
-            //if(selfEsteem<=0)
-            //gameOverScreen.SetActive(true);
-            //lose condition
+            
+            if(other.gameObject.CompareTag("Bullet")) other.GetComponent<Bullet>().BulletDestroy ();
+
         }
     }
 }
