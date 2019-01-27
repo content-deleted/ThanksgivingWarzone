@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2315309991172486088}
   m_Layer: 0
   m_Name: letter
-  m_TagString: Enemy
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveVector: {x: 0, y: 0}
-  hostile: 0
-  letter: 0
+  hostile: 1
+  letter: 1
 --- !u!23 &2723083570527524267
 MeshRenderer:
   m_ObjectHideFlags: 0

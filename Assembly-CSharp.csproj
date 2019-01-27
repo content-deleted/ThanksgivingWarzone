@@ -67,7 +67,6 @@
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\SelfEsteemBar.cs" />
-     <Compile Include="Assets\Scripts\T.cs" />
      <Compile Include="Assets\Scripts\Utils.cs" />
      <None Include="Assets\Background.shader" />
      <None Include="Assets\SpriteFont.shader" />

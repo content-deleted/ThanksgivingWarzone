@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2039660294084104883}
   m_Layer: 0
   m_Name: bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveVector: {x: 0, y: 0}
-  hostile: 0
+  hostile: 1
   letter: 0
 --- !u!58 &2039660294084104883
 CircleCollider2D:
