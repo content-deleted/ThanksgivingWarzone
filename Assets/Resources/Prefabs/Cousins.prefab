@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8246998029337119901}
   m_Layer: 0
   m_Name: Cousins
-  m_TagString: Untagged
+  m_TagString: Bad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e086c92566b5e8a49bdb79a6fb4a0d01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  downSpeed: 0
-  sideSpeed: 0
-  sideTime: 0
+  downSpeed: 2
+  sideSpeed: 2
+  sideTime: 200
 --- !u!1 &2566251242808358010
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 6828161819269621643}
   m_Layer: 0
   m_Name: Brad
-  m_TagString: Untagged
+  m_TagString: Bad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 1285776433954477862}
   m_Layer: 0
   m_Name: Chad
-  m_TagString: Untagged
+  m_TagString: Bad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
