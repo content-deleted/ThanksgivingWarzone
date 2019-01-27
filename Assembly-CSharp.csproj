@@ -70,7 +70,7 @@
     <Compile Include="Assets\Scripts\MoveWithCam.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\SelfEstimeBar.cs" />
+    <Compile Include="Assets\Scripts\SelfEsteemBar.cs" />
     <Compile Include="Assets\Scripts\T.cs" />
     <Compile Include="Assets\Scripts\Utils.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
