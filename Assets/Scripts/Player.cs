@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
 
 
 
-    void FixedUpdate()
+    void Update()
     {
         float X=Input.GetAxis("Horizontal");
         float Y = Input.GetAxis("Vertical");

@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class OnScreenEnemy : MonoBehaviour
 {
-    static List<OnScreenEnemy> inactiveEnemies = new List<OnScreenEnemy>();
+    // This is the method to call after we awaken the enemy
+    public event Action start;
     void Awake()
     {
-        inactiveEnemies.Add(this);
+        EnemyController.inactiveEnemies.Add(this);
         gameObject.SetActive(false);
     }
     
@@ -15,6 +17,7 @@ public class OnScreenEnemy : MonoBehaviour
     /// Call this when the enemy goes on screen
     /// </summary>
     public void Awaken () {
-
+        gameObject.SetActive(true);
+        start?.Invoke();
     }
 }
