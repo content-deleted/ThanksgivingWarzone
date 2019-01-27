@@ -34,7 +34,7 @@ public class BulletSpawner : MonoBehaviour {
 			Vector2 direction = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
             
 			var sp = BulletPool.rent();
-			sp.transform.localPosition = new Vector3 (transform.localPosition.x, transform.localPosition.y, 0);
+			sp.transform.position = new Vector3 (transform.position.x, transform.position.y, 0);
 			sp.GetComponent<Bullet>().Init(direction, 0,bulletSpeed, moveFunc,bulletSprite, bulletTint, true);
 		    
         	sp.transform.localScale = scale;
