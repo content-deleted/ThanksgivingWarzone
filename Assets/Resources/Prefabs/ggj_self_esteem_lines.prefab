@@ -334,10 +334,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parts:
-  - {fileID: 8622850325934159867}
-  - {fileID: 8622850326376806860}
-  - {fileID: 8622850327866246640}
-  - {fileID: 8622850327197141033}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   fadeOutSpeed: 2
 --- !u!1 &8622850327866246640
 GameObject:

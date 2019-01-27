@@ -38,10 +38,6 @@ public class BulletSpawner : MonoBehaviour {
 			sp.GetComponent<Bullet>().Init(direction, 0,bulletSpeed, moveFunc,bulletSprite, bulletTint, true);
 		    
         	sp.transform.localScale = scale;
-
-
-                //Kevin's tag edit
-                sp.tag = "Bad";
 		}
 		yield return new WaitForSeconds(bulletfrequency);
 	}}
