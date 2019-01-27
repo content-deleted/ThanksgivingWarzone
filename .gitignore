@@ -1,3 +1,5 @@
-**/temp/
+**/temp/**
 *.log
 *.exe0
+/Library/**
+/obj/**
