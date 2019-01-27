@@ -17,6 +17,12 @@ public class Player : MonoBehaviour
         else
             Destroy(gameObject);
     }
+    Animator anim;
+
+        private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     void OnTriggerEnter2D (Collider2D other) {
         if ( (other.gameObject.CompareTag("Bullet") && other.GetComponent<Bullet>().hostile ) 
@@ -26,8 +32,21 @@ public class Player : MonoBehaviour
             // Hurt the player
             if(selfEsteem>=0)
             SelfEsteemBar.singleton.decrementSelfEsteemBar(selfEsteem);
-            //if(selfEsteem==0)
+            //if(selfEsteem<=0)
+                //gameOverScreen.SetActive(true);
             //lose condition
+        }
+        else if (other.tag.Equals("Good"))
+        {
+            anim.SetTrigger("GotFood");
+            other.attachedRigidbody.isKinematic = false;
+            other.transform.position = new Vector3(-28+Random.value*2.2f,0, 0);
+            //Heal
+            /* if (SelfEsteem < 4)
+            {
+                spiral.incrementSelfEsteemBar();
+                SelfEsteem++;
+            }*/
         }
     }
     public float bulletSpeed = 1;
