@@ -63,8 +63,10 @@
     <Compile Include="Assets\Scripts\BulletScripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\BulletScripts\BulletPool.cs" />
     <Compile Include="Assets\Scripts\BulletScripts\BulletSpawner.cs" />
+    <Compile Include="Assets\Scripts\BulletScripts\LetterPool.cs" />
+    <Compile Include="Assets\Scripts\BulletScripts\LetterSpawn.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scripts\CousinMovement.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\CousinMovement.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\OnScreenEnemy.cs" />
     <Compile Include="Assets\Scripts\MoveWithCam.cs" />
@@ -73,6 +75,7 @@
     <Compile Include="Assets\Scripts\SelfEsteemBar.cs" />
     <Compile Include="Assets\Scripts\T.cs" />
     <Compile Include="Assets\Scripts\Utils.cs" />
+    <None Include="Assets\SpriteFont.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/theke/Documents/GitHub/ThanksgivingWarzone/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
