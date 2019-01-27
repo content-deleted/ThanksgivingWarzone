@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\SelfEsteemBar.cs" />
      <Compile Include="Assets\Scripts\T.cs" />
      <Compile Include="Assets\Scripts\Utils.cs" />
+     <None Include="Assets\Background.shader" />
      <None Include="Assets\SpriteFont.shader" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/dev/ThanksgivingWarzone/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
