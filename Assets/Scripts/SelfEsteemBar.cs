@@ -5,7 +5,7 @@ using UnityEngine;
 public class SelfEsteemBar : MonoBehaviour
 {
     public GameObject[] parts;
-    private int current=0;
+    public int current=0;
     public float fadeOutSpeed;
     void Start()
     {
@@ -17,15 +17,30 @@ public class SelfEsteemBar : MonoBehaviour
     {}
     public void decrementSelfEsteemBar()
     {
-        parts[current].GetComponent<SpriteRenderer>().color = new Color(0.3962264f, 0.3943574f, 0.3943574f);
-        //StartCoroutine("Fade", parts[current]);
-        current++;
+        try
+        {
+            parts[current].GetComponent<SpriteRenderer>().color = new Color(0.3962264f, 0.3943574f, 0.3943574f);
+            //StartCoroutine("Fade", parts[current]);
+            current++;
+        }
+        catch
+        {
+            print("underflow");
+        }
     }
 
     public void incrementSelfEsteemBar()
     {
-        current--;
-        parts[current].GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
+        try
+        {
+            current--;
+            parts[current].GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
+        }
+        catch
+        {
+            current++;
+            print("overflow");
+        }
     }
 
     public IEnumerator Fade(GameObject r)

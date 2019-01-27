@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     int anime=0;
     public SelfEsteemBar spiral;
     public static PlayerMovement instance;
-    private int SelfEsteem=4;
+    public int SelfEsteem=4;
     public GameObject gameOverScreen;
 
     private void Awake()
@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (SelfEsteem <= 0)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
             gameOverScreen.SetActive(true);
         }
         if (other.tag.Equals("Good"))
@@ -83,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
             if (SelfEsteem < 4)
             {
                 spiral.incrementSelfEsteemBar();
+                SelfEsteem++;
             }
         }
     }
