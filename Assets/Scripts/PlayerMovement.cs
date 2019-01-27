@@ -78,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetTrigger("GotFood");
             other.attachedRigidbody.isKinematic = false;
-            other.transform.position = new Vector3(-28+Random.value*2.5f,0, 0);
+            other.transform.position = new Vector3(-28+Random.value*2.2f,0, 0);
             //Heal
             if (SelfEsteem < 4)
             {
