@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1949232646292715501}
   - component: {fileID: 7908041018499706254}
   - component: {fileID: 1413042151967625112}
+  - component: {fileID: 2039660294084104883}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Untagged
@@ -94,3 +95,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveVector: {x: 0, y: 0}
   hostile: 0
+  letter: 0
+--- !u!58 &2039660294084104883
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5296748673616566070}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.28449655
